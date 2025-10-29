@@ -12,7 +12,7 @@ export default function ChatBox() {
   const boxRef = useRef(null);
   const inputRef = useRef(null);
 
-  // ✅ Send message
+  // Send message
   const send = () => {
     if (!text.trim()) return; // ignore empty
     const user = user_list[Math.floor(Math.random() * user_list.length)];
@@ -23,26 +23,24 @@ export default function ChatBox() {
     setShowEmojiPicker(false);
   };
 
-  // ✅ Like a message
+  // Like a message
   const handleLike = (id) => {
     setMessages((prev) =>
       prev.map((m) => (m.id === id ? { ...m, likes: m.likes + 1 } : m))
     );
   };
 
-  // ✅ Auto-scroll to bottom when new message arrives
   useEffect(() => {
     if (boxRef.current) {
       boxRef.current.scrollTop = boxRef.current.scrollHeight;
     }
   }, [messages]);
-
-  // ✅ Input handler
+  
   const handleInputChange = (e) => {
     setText(e.target.value);
   };
 
-  // ✅ Add emoji to message
+  // Emoji
   const handleEmojiClick = (emojiObject) => {
     setText((prev) => prev + emojiObject.emoji);
     setShowEmojiPicker(false);
@@ -70,7 +68,7 @@ export default function ChatBox() {
           </div>
         )}
 
-        {/* Emoji toggle button */}
+        {/* Emoji button*/}
         <button
           className="emoji-btn"
           onClick={() => setShowEmojiPicker(!showEmojiPicker)}
@@ -96,3 +94,4 @@ export default function ChatBox() {
     </div>
   );
 }
+
