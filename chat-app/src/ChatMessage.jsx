@@ -1,13 +1,7 @@
 import React from "react";
 import { FaThumbsUp } from "react-icons/fa";
 
-/*
-  ChatMessage receives:
-    message = { id, user, text, likes }
-    onLike = function to call when thumbs up clicked
-*/
 export default function ChatMessage({ message, onLike }) {
-  // initials from username (works if single name too)
   const initials = message.user
     .split(" ")
     .map(n => n[0])
@@ -40,3 +34,4 @@ export default function ChatMessage({ message, onLike }) {
     </div>
   );
 }
+
