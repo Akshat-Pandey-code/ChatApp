@@ -10,18 +10,18 @@
 * { box-sizing: border-box; }
 body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-serif; background: var(--bg); }
 
-/* center wrapper similar to sample (chat area on center-right look) */
+/* center wrapper */
 .center-wrap {
   width: 100%;
   max-width: 1100px;
   margin: 24px auto;
   display: flex;
-  justify-content: center; /* keep chat centered horizontally */
+  justify-content: center; 
 }
 
-/* Chat shell (white panel) */
+/* white panel */
 .chat-shell {
-  width: 820px;            /* stretch to be wide like sample */
+  width: 820px;            
   height: 640px;
   background: var(--chat-bg);
   border-radius: 10px;
@@ -31,7 +31,7 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
   overflow: hidden;
 }
 
-/* header area (simple, as sample) */
+/* header area  */
 .chat-header {
   padding: 20px 28px;
   border-bottom: 1px solid #e7eaf0;
@@ -58,7 +58,6 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
   background: linear-gradient(180deg, rgba(242,246,249,0.6), rgba(242,246,249,0.6));
 }
 
-/* a single message row layout: avatar | bubble | like */
 .chat-message-row {
   display: flex;
   align-items: flex-start;
@@ -81,7 +80,7 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
   box-shadow: 0 1px 0 rgba(0,0,0,0.04);
 }
 
-/* middle column: name + bubble */
+/* middle column */
 .middle-col {
   display: flex;
   flex-direction: column;
@@ -89,7 +88,7 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
   width: calc(100% - 90px); /* leave room for like on right */
 }
 
-/* username small & muted */
+/* username */
 .msg-user {
   font-size: 13px;
   color: var(--muted);
@@ -108,7 +107,7 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
   box-shadow: 0 2px 8px rgba(20,30,60,0.03);
 }
 
-/* right column: thumbs up, aligned center vertically with bubble */
+
 .right-col {
   display:flex;
   align-items:flex-start;
@@ -117,7 +116,7 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
   padding-left: 4px;
 }
 
-/* thumb button with visible count (starts 0) */
+/* like button */
 .thumb-btn {
   background: none;
   border: none;
@@ -132,14 +131,12 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
 }
 .thumb-btn:hover { background: rgba(47,108,229,0.06); transform: translateY(-1px); }
 
-/* count style */
 .thumb-count {
   color: var(--accent);
   font-weight:600;
   font-size:14px;
 }
 
-/* bottom input area */
 .input-row {
   display: flex;
   align-items: center;
@@ -175,6 +172,7 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
   background-color: #0056b3;
 }
 
+/* emoji */
 .emoji-picker {
   position: absolute;
   bottom: 55px;
@@ -190,6 +188,5 @@ body, html { height: 100%; margin: 0; font-family: "Poppins", "Segoe UI", sans-s
 }
 
 
-/* make scrollbars thin and subtle */
 .messages-area::-webkit-scrollbar { width: 8px; }
 .messages-area::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); border-radius: 6px; }
